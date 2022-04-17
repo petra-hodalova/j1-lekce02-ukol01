@@ -192,6 +192,102 @@ public class Turtle {
         }
     }
 
+
+    public void drawP(double size){
+        move(size);
+
+        for (int i = 0; i < 3; i++) {
+            turnRight(90);
+            move(size/2);
+        }
+        turnLeft(90);
+        penUp();
+        move(size/2);
+        turnLeft(90);
+        move(size/2+size/2);
+        turnLeft(90);
+        penDown();
+
+    }
+
+
+    public void drawR(double size) {
+        move(size);
+
+        for (int i = 0; i < 3; i++) {
+            turnRight(90);
+            move(size/2);
+        }
+        turnLeft(135);
+        double r = Math.sqrt((size*size)/2);
+        move(r);
+        penUp();
+        turnLeft(45);
+        move(size/2);
+        turnLeft(90);
+        penDown();
+    }
+
+    public void drawE(double size){
+        move(size);
+        turnRight(90);
+        move(size/2);
+
+        for (int i = 0; i < 2; i++) {
+            turnRight(180);
+            move(size/2);
+            turnLeft(90);
+            move(size/2);
+            turnLeft(90);
+            move(size/2);
+        }
+
+        penUp();
+        move(size/2);
+        turnLeft(90);
+        penDown();
+
+    }
+
+    public void drawT(double size){
+        penUp();
+        move(size);
+        penDown();
+        turnRight(90);
+        move(size);
+        turnLeft(180);
+        move(size/2);
+        turnLeft(90);
+        move(size);
+        penUp();
+        turnLeft(90);
+        move(size);
+        turnLeft(90);
+        penDown();
+    }
+
+    public void drawA(double size) {
+        double a=Math.sqrt(size*size+size/2*size/2);
+        turnRight(30);
+        move(a);
+        turnRight(120);
+        move(a);
+        turnRight(180);
+        move(a/2);
+        turnLeft(60);
+        move(a/2);
+        penUp();
+        turnRight(180);
+        move(a/2);
+        turnRight(60);
+        move(a/2);
+        turnLeft(60);
+        move(size/2);
+        turnLeft(90);
+        penDown();
+    }
+
+
     //-------------------------------------------------------------------------
 
     private void testPause() {

@@ -30,11 +30,14 @@ public class HlavniProgram {
             positionX=positionX+size+700;
         }
 
-        zofka.drawPig(550,470,100);
+        zofka.drawPig(550,470,size);
 
-
-
-
+        zofka.setLocation(300,640);
+        zofka.drawP(size);
+        zofka.drawE(size);
+        zofka.drawT(size);
+        zofka.drawR(size);
+        zofka.drawA(size);
 
     }
 
