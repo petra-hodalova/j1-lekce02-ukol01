@@ -135,6 +135,46 @@ public class Turtle {
     }
 
     //-------------------------------------------------------------------------
+    public void drawHouse(double x, double y, double sizeInPixels){
+        double roof=Math.sqrt((sizeInPixels*sizeInPixels)/2);
+        setLocation(x,y);
+
+        for (int i = 0; i <5 ; i++) {
+            move(sizeInPixels);
+            turnRight(90);
+        }
+
+        turnLeft(45);
+        move(roof);
+        turnRight(90);
+        move(roof);
+        turnLeft(135);
+
+    }
+
+    public void drawPig(double x, double y, double sizeInPixels){
+        double legSize=sizeInPixels/4;
+        turnLeft(90);
+        drawHouse(x,y,sizeInPixels);
+        setLocation(x,y);
+
+        for (int i = 0; i < 2; i++) {
+
+            turnLeft(120);
+            move(legSize);
+            turnRight(180);
+            move(legSize);
+            turnLeft(120);
+            move(legSize);
+            setLocation(x-sizeInPixels,y);
+            turnRight(60);
+        }
+
+        turnRight(90);
+
+    }
+
+    //-------------------------------------------------------------------------
 
     private void testPause() {
         while (board.getShouldPause()) {

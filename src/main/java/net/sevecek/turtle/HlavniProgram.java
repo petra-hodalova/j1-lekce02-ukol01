@@ -8,6 +8,9 @@ public class HlavniProgram {
         Turtle zofka;
 
         zofka = new Turtle();
+
+        zofka.drawPig(500,400,120);
+
     }
 
 }
