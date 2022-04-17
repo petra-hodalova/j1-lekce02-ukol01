@@ -171,7 +171,25 @@ public class Turtle {
         }
 
         turnRight(90);
+    }
 
+    public void polygon(double x, double y, double length, int numberOfAngles, boolean sun){
+        setLocation(x,y);
+        double angle=360/numberOfAngles;
+        double sunAngle=180-((180-angle)/2+angle);
+
+        for (int i = 0; i <numberOfAngles ; i++) {
+            move(length);
+            if(sun){
+                turnLeft(sunAngle);
+                move(length);
+                turnRight(180);
+                move(length);
+                turnLeft(angle+(180-angle)/2);
+            }
+            turnRight(angle);
+
+        }
     }
 
     //-------------------------------------------------------------------------
